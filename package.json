@@ -17,6 +17,14 @@
   },
   "private": true,
   "cds": {
+    "build": {
+      "tasks":[
+        {
+          "for": "hana",
+          "dest":"../db"
+        }
+      ]
+    },
     "requires": {
       "[production]": {
         "auth": "xsuaa"
