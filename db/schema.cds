@@ -42,3 +42,15 @@ entity Categories {
     CategoryName  : String(100);           // Category Name
     Description   : String(100);           // Category Description
 }
+
+entity Combined {
+    ProductID       : UUID;
+    ProductName     : String(100);
+    SupplierID      : String(100);
+    CompanyName     : String(100);
+    Address         : String(100);
+    City            : String(100);
+    Region          : String(100);
+    CategoryName    : String(100);
+    Description     : String(100);
+}
