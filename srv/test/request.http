@@ -1,0 +1,39 @@
+@baseUrl = http://localhost:4004/odata/v4
+
+@UUID = 3946ce4d-0793-4f3a-9678-f91b85f16a41
+
+GET {{baseUrl}}/catalog/northwind HTTP/1.1
+
+### CREATE
+POST {{baseUrl}}/catalog/logBooks HTTP/1.1
+Content-Type: application/json
+
+{ 
+    "name": "Lyka",
+    "id": "5678",
+    "title":"Gemini",
+    "author": "Gem",
+    "date": "2025-12-08"
+}
+
+### READ
+POST {{baseUrl}}/catalog/getBooks HTTP/1.1
+Content-Type: application/json
+
+{ "id": "4321" }
+
+### Load Suppliers from destination
+POST {{baseUrl}}/catalog/insertTBProducts HTTP/1.1
+Content-Type: application/json
+
+### Load Suppliers from destination
+POST {{baseUrl}}/catalog/insertTBSuppliers HTTP/1.1
+Content-Type: application/json
+
+### Load Categories from destination
+POST {{baseUrl}}/catalog/insert HTTP/1.1
+Content-Type: application/json
+
+### READ
+POST {{baseUrl}}/catalog/getCombined HTTP/1.1
+Content-Type: application/json
